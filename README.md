@@ -22,7 +22,7 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
 - /indie/band/:band
 >  **retorna, se existente, uma banda requerida pelo usuário, juntamente com seus respectivos albums e músicas.**
 - /indie/albums/:album
-> **retorna, se existente, um album requerido pelo usuário, juntamente com seus respectivos artista e músicas.**
+> **retorna, se existente, um album requerido pelo usuário, juntamente com seus respectivos artistas e músicas.**
 - /indie/songs/:song
 >  **retorna, se existente, uma música requerida pelo usuário, juntamente com seus respectivos artistas e albums.**
 
