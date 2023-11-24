@@ -6,6 +6,11 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
 - Após isso, clona-se o repositório em seu editor de código de preferência.
 - O funcionamento do servidor depende da sua iniciação por via do terminal do mesmo editor, com o comando **npm start**
 
+  ## Consultas
+  Para realizar as consultas, deve-se implementar ao link do servidor local:
+
+> - /indie
+
 
 
   
