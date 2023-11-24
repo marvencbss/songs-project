@@ -3,3 +3,4 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
 
 ### Acesso
 - É necessário realizar a instalação da Database [indie.db](indie.db)
+- Após isso, 
