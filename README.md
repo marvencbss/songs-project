@@ -10,7 +10,7 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
   Para realizar as consultas, deve-se implementar ao link do servidor local:
 
 - /indie
- **retorna Data inteira da database.**
+> **retorna Data inteira da database.**
 - /indie/bands
   **retorna somente todas as bandas cujas constam no banco de dados.**
 - /indie/albums
