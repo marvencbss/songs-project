@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indie Music Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        #result {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Indie Music Database</h1>
+
+    <button onclick="getIndieData()">Get Indie Data</button>
+    <button onclick="getBands()">Get Bands</button>
+    <button onclick="getAlbums()">Get Albums</button>
+    <button onclick="getSongs()">Get Songs</button>
+
+    <h2>Search by Band:</h2>
+    <input type="text" id="bandInput" placeholder="Enter band name">
+    <button onclick="searchByBand()">Search</button>
+
+    <h2>Search by Album:</h2>
+    <input type="text" id="albumInput" placeholder="Enter album name">
+    <button onclick="searchByAlbum()">Search</button>
+
+    <h2>Search by Song:</h2>
+    <input type="text" id="songInput" placeholder="Enter song name">
+    <button onclick="searchBySong()">Search</button>
+
+    <div id="result"></div>
+
+    <script>
+        function displayResult(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = JSON.stringify(data, null, 2);
+        }
+
+        function getIndieData() {
+            fetch('http://localhost:3030/indie')
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function getBands() {
+            fetch('http://localhost:3030/indie/bands')
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function getAlbums() {
+            fetch('http://localhost:3030/indie/albums')
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function getSongs() {
+            fetch('http://localhost:3030/indie/songs')
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function searchByBand() {
+            const bandName = document.getElementById('bandInput').value;
+            fetch(`http://localhost:3030/indie/band/${encodeURIComponent(bandName)}`)
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function searchByAlbum() {
+            const albumName = document.getElementById('albumInput').value;
+            fetch(`http://localhost:3030/indie/albums/${encodeURIComponent(albumName)}`)
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+
+        function searchBySong() {
+            const songName = document.getElementById('songInput').value;
+            fetch(`http://localhost:3030/indie/songs/${encodeURIComponent(songName)}`)
+                .then(response => response.json())
+                .then(data => displayResult(data))
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
