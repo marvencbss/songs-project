@@ -5,6 +5,7 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
 - É necessário realizar a instalação da Database [indie.db](indie.db).
 - Após isso, clona-se o repositório em seu editor de código de preferência.
 - O funcionamento do servidor depende da sua iniciação por via do terminal do mesmo editor, com o comando **npm start**
+- Certifique-se de ter instalado node Modules no mesmo editor de código e área de trabalho.
 
   ## Consultas
   Para realizar as consultas, deve-se implementar ao link do servidor local:
