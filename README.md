@@ -9,7 +9,7 @@ Projeto de desenvolvimento Back-end baseado em consultas SQL e Implementação e
 - Certifique-se de estar acessando corretamente o servidor através de `http://localhost:3030/`
 
   ## Consultas
-  Para realizar as consultas, deve-se implementar ao link do servidor local:
+  Para realizar as consultas, deve-se adicionar ao link do servidor local:
 
 - /indie
 > **retorna Data completa da database.**
